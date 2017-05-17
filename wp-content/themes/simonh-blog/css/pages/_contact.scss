@@ -1,0 +1,79 @@
+.contact-outer {
+	padding-top: $standard-padding-top;
+	
+	.contact-inner {
+		
+		h1 {
+			margin-bottom: 23px;
+		}
+
+		.contact-us {
+
+			.form-item {
+				display: inline-block;
+				width: 50%;
+				float: left;
+				padding: 0 4% 0 0;
+				margin-bottom: 24px;	
+
+				@include respond-max($mobile-max) {
+					padding-right: 0;
+				}
+
+				label {
+					width: 100%;
+					display: inline-block;
+					margin-bottom: 6px;
+				}
+
+				input, select, textarea {	
+					width: 100%;
+					padding: 12px 6px;
+				}
+
+				select {
+					height: 37px;
+					border-radius: 0;
+					-webkit-appearance: none;
+					cursor: pointer;
+				}
+			}	
+
+			.form-item.full {
+				width: 100%;
+			}
+
+			.form-actions {
+				padding: 0px 4% 0px 0px;
+				float: left;
+				width: 100%;
+				text-align: right;
+
+				.btn-primary {
+					padding: 6px 16px;
+					margin-bottom: 24px;
+    				font-family: $commadore-font;
+				}
+			}
+		}
+
+		.contact-info {
+
+			@include respond-max($mobile-max) {
+				display: none;
+			}
+
+			h1 {
+				margin-bottom: 23px;
+				color: #000;
+			}
+
+			ul {
+
+				li {
+					margin-bottom: 12px;
+				}
+			}
+		}
+	}
+}

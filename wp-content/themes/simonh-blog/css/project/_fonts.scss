@@ -1,0 +1,33 @@
+//store fonts here
+
+// @font-face {
+//     font-family: 'commadore-font';
+//     src: url('fonts/commadore/commadore-webfont.eot');
+//     src: url('fonts/commadore/commadore-webfont.eot?#iefix') format('embedded-opentype'),
+//     	url('fonts/commadore/commadore-webfont.ttf') format('truetype'),
+//     	url('fonts/commadore/commadore-webfont.svg') format('svg'),
+// 		url('fonts/commadore/commadore-webfont.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+@font-face {
+    font-family: 'liner';
+    src: url('fonts/liner.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+        
+@font-face {    
+    font-family: 'code-bold';
+    src: url('fonts/code-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'code-light';
+    src: url('fonts/code-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

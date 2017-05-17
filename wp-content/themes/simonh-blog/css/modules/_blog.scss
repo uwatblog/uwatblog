@@ -1,0 +1,17 @@
+#main > *, header {
+	opacity: 0;
+	//@include transition(opacity 10.0s ease);
+
+	.no-js & {
+		opacity: 1;
+	}
+
+	.js & {
+		opacity: 0;
+	}
+
+	.fade-in & {
+		@include transition(opacity .1s ease);
+		opacity: 1;
+	}
+}

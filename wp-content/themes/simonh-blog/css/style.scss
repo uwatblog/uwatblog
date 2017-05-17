@@ -1,0 +1,35 @@
+/*
+Theme Name:
+Author:
+Description: We've got more sass than a cow has moo
+*/
+
+/* generic useful variables and mixins */
+@import "generic/mixins";	
+@import "generic/variables";	
+@import "generic/animations";	
+				
+/* third party libraries to include */
+@import "libraries/reset";
+@import "libraries/grid";
+
+/* project specific */	
+@import "project/structure";
+@import "project/fonts";	
+	
+/* pages */
+//@import "pages/index";	
+//@import "pages/error";	
+//@import "pages/contact";	
+	
+/* modules */
+@import "modules/footer"; 
+@import "modules/header";	
+@import "modules/blog";
+//@import "modules/post";
+@import "modules/hero";
+@import "modules/three-post-listing";
+@import "modules/intro-text";
+
+/* anything else */	
+@import "other/other";	

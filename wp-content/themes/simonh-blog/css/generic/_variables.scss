@@ -1,0 +1,65 @@
+// store variables here
+$super-site-width: 1440px;
+$site-width: 1136px;
+
+$mobile-min: 0px;
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 991px;
+$desktop-min: 992px;
+
+$default-font: 'menlo', Helvetica, Arial, sans-serif;
+
+//sizes
+$base-font-size: 16px;
+$h1-font-size: 28px;
+$h2-font-size: 44px;	
+$h3-font-size: 24px;
+$h4-font-size: 18px;
+$p-font-size: 16px;
+$p-line-height: 25px;
+
+$main-font-color: #000;
+$main-link-color: #4040E0;
+$site-background-color: #fff;
+$heading-color: #000;
+
+$standard-padding-top: 1.5em;
+
+$solarized-1 : #073642;
+$solarized-2 : #002B36;
+$solarized-3 : #2B3E44;
+$solarized-4 : #E6E6E6;
+
+/* light to dark */
+$midnight-blue-1: #c5f1f0;
+$midnight-blue-2: #74accf;
+$midnight-blue-3: #3e77a4;	
+$midnight-blue-4: #2f567d;
+$midnight-blue-5: #1d2b45;
+$midnight-blue-6: #131a2c;
+$black: #000;
+$white: #fff;
+
+//colors
+$light-green: #84A3AD;
+
+/* fun c64 colours */
+$c64-light-blue : #A0A0FF;
+$c64-dark-blue : #4040E0;
+$commadore-font : 'commadore-font', Helvetica, Arial, sans-serif;
+$liner-font : 'liner', Helvetica, Arial, sans-serif;
+$code-light-font : 'code-light', Helvetica, Arial, sans-serif;
+$code-bold-font : 'code-bold', Helvetica, Arial, sans-serif;
+
+$layer-0: 0;
+$layer-1: 10;	
+$layer-2: 20;
+$layer-3: 30;
+$layer-4: 40;
+$layer-5: 50;
+$layer-6: 60;
+$layer-7: 70;
+$layer-8: 80;
+$layer-9: 90;
+$layer-10: 100;

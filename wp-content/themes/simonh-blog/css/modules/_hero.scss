@@ -1,0 +1,260 @@
+.hero-outer {
+	padding: 0;
+	position: relative;
+	box-sizing: border-box;
+	height: 300px;
+	padding: 0;
+	overflow: hidden;
+	background-color: $site-background-color;
+
+	@include respond-max($mobile-max) {
+		height: auto;
+	}
+
+	/* whole section has one hover */
+	&:hover {
+
+		.container {
+
+			&:before {
+				background-color: $midnight-blue-3;
+			}
+
+			&:after {
+				background-color: $midnight-blue-3;
+			}
+		}
+
+		.hero-inner h1 {
+			color: $midnight-blue-3;
+
+			&:before {
+				border: 1px solid $midnight-blue-3;
+			}
+		}
+	}
+
+	.container {
+		height: 100%;
+		position: relative;
+		z-index: 0;
+		display: flex;
+		align-items: center;
+
+		@include respond-max($mobile-max) {
+			padding: 42px 15px;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			background-color: $midnight-blue-5;
+			@include transition(background-color .3s ease);
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 1px;
+			width: 100%;
+			background-color: $midnight-blue-5;
+			@include transition(background-color .3s ease);
+		}
+	}
+
+	&:before {
+		content: '';
+		width: 400px;
+		height: 1px;
+		position: absolute;
+		top: 0;
+		left: -10%;
+		display: inline-block;
+		background-image: url(images/hero_border_shine.png);
+		animation: anim1 90s infinite;
+		opacity: 0;
+		z-index: 1;
+	}
+
+	&:after {
+		content: '';
+		width: 400px;
+		height: 1px;
+		position: absolute;
+		bottom: 0;
+		right: -10%;
+		display: inline-block;
+		background-image: url(images/hero_border_shine.png);
+		animation: anim2 90s infinite;
+		opacity: 0;
+		z-index: 1;
+	}
+
+	.hero-inner {
+		width: 100%;
+
+		section {
+
+			@include respond-max($mobile-max) {
+				padding: 0;
+			}
+		}
+
+		h1 {
+			@include font-size(72px);
+			margin-bottom: 10px;
+			color: $midnight-blue-5;
+			font-family: $code-light-font;	
+			position: relative;
+			display: inline-block;
+			background-color: $site-background-color;
+			@include transition(color .3s ease);
+			margin-left: 40px;
+
+			@include respond-max($tablet-max) {
+				@include font-size(52px);
+				margin-left: 29px;
+			}
+
+			@include respond-max($mobile-max) {
+				margin-left: 0;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				border: 1px solid $midnight-blue-5;
+				width: 110%;
+				top: 35px;
+				left: 45%;
+				height: 78%;
+				margin-left: -50%;
+				z-index: -1;
+				display: inline-block;
+				@include transition(border .3s ease);
+
+				@include respond-max(900px) {
+					width: 10%;
+					border-right: none;
+				}
+
+				@include respond-max($tablet-max) {
+					top: 30px;
+				}
+
+				@include respond-max($mobile-max) {
+					display: none;
+				}
+			}
+
+			&:after {
+				content: '';
+				left: -16px;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				display: inline-block;
+				position: absolute;
+				background-color: $site-background-color;
+				z-index: -1;
+				padding-left: 16px;
+				padding-right: 16px;
+				box-sizing: content-box;
+			}
+		}
+
+		h2 {
+			@include font-size(12px);
+			text-transform: none;
+			color: $midnight-blue-3;
+			display: table;
+			position: relative;
+			margin-left: 40px;
+
+			@include respond-max($tablet-max) {
+				margin-left: 29px;
+			}
+
+			@include respond-max($mobile-max) {
+				margin-left: 0;
+			}
+
+			&:after {
+				display: inline-block;
+				content: '';
+				position: absolute;
+				left: -16px;
+				width: 100%;
+				height: 100%;
+				box-sizing: content-box;
+				background-color: $site-background-color;
+				z-index: -1;
+				padding-left: 16px;
+				padding-right: 16px;
+			}
+		}
+	}
+}
+
+@keyframes anim1 {
+    0% {
+    	left: -10%;
+    	opacity: 0;
+    }
+    5% {
+    	opacity: 1;
+    }
+    15% {
+    	opacity: 1;
+    }
+    25% {
+    	opacity: 0.85;
+    }
+    50% {
+    	left: 90%;
+    	opacity: 1;
+    }
+    75% {
+    	opacity: 0.85;
+    }
+    100% {
+    	opacity: 0;
+    	left: -10%;
+    }
+}
+
+@keyframes anim2 {
+    0% {
+    	right: -10%;
+    	opacity: 0;
+    }
+    10% {
+    	opacity: 0.85;
+    }
+    20% {
+    	opacity: 1;
+    }
+    35% {
+    	opacity: 1;
+    }
+    50% {
+    	right: 90%;
+    	opacity: 1;
+    }
+    65% {
+    	opacity: 0.85;
+    }
+    80% {
+    	opacity: 1;
+    }
+    100% {
+    	opacity: 0;
+    	right: -10%;
+    }
+}

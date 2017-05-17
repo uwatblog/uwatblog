@@ -1,0 +1,106 @@
+/* From https://gist.github.com/maikeldaloo/ebade51803e29c14f0ea/download# */
+$grid-settings: (
+	max-width: 100%,
+	columns: 12,
+	gutter: 0,	
+	enable-box-sizing: true
+) !default;
+$grid-breakpoints: (
+	mob: $mobile-min,
+	tab: $tablet-min,
+	desk: $desktop-min,
+) !default;
+
+@mixin breakpoint($point) {
+	@each $breakpoint in map-keys($grid-breakpoints) {
+		@if $point == $breakpoint {
+			@media (min-width: map-get($grid-breakpoints, $breakpoint)) { @content; }
+		}
+	}
+}
+
+@if map-get($grid-settings, enable-box-sizing) == true {
+	*, *:before, *:after {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: map-get($grid-settings, max-width);
+	position: relative;
+	padding: 0 30px;
+
+	@include respond-max($mobile-max) {
+        padding: 0 15px;			
+    }
+}
+
+.row {
+	&:after{
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+[class^=col-] {
+	float: left;
+	direction: ltr;
+	min-height: 1px;
+	padding-left: map-get($grid-settings, gutter) / 2;
+	padding-right: map-get($grid-settings, gutter) / 2;
+	position: relative;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@for $i from 0 through map-get($grid-settings, columns) {
+		@include breakpoint($breakpoint) {
+			.col-#{$breakpoint}-#{$i} {
+				width: percentage($i / map-get($grid-settings, columns));
+			}
+			.col-#{$breakpoint}-push-#{$i} {
+				left: percentage($i / map-get($grid-settings, columns));
+			}
+			.col-#{$breakpoint}-pull-#{$i} {
+				right: percentage($i / map-get($grid-settings, columns));
+			}
+		}
+	}
+	.col-#{$breakpoint}-center {
+		@include breakpoint($breakpoint) {
+			display: block;
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+			clear: both;
+		}
+	}
+	.col-#{$breakpoint}-no-center {
+		@include breakpoint($breakpoint) {
+			float: left;
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	.visible-#{$breakpoint} {
+		display: none;
+		@include breakpoint($breakpoint) {
+			display: block;
+		}
+	}
+	.hidden-#{$breakpoint} {
+		@include breakpoint($breakpoint) {
+			display: none;
+		}
+	}
+	.no-gutter-#{$breakpoint} {
+		@include breakpoint($breakpoint) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}

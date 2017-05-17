@@ -1,0 +1,103 @@
+//stuff that affects everything
+
+html {
+    font-size: $base-font-size;
+    margin: 0;
+    padding: 0;
+
+    * {
+        box-sizing: border-box; 
+        font-family: $default-font;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5 {
+        color: $heading-color;
+        font-weight: 100;
+    }
+
+	h1 {
+	    @include font-size($h1-font-size);
+        margin-bottom: 23px;    
+	}
+
+	h2 {
+	    @include font-size($h2-font-size);
+	    
+	}
+
+	h3 {
+	    @include font-size($h3-font-size);
+	}
+
+	h4 {
+	    @include font-size($h4-font-size);
+	}
+
+	p, a {
+	    @include font-size($p-font-size);
+	    font-family: $default-font;
+	    color: $main-font-color;       
+	    line-height: $p-line-height;
+	}
+
+	a {
+		color: $main-link-color;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: none;
+        }
+	}    
+
+    body, html {
+        background-color: $site-background-color;
+    }
+
+    .desktop-only {
+        display: block !important;
+
+        @include respond-max($mobile-max) {
+            display: none !important;
+        }
+    }
+
+    .mobile-only {
+        display: none !important;
+
+        @include respond-max($mobile-max) {
+            display: block !important;
+        }
+    }
+}   
+
+/* important - link variables and mixins to classes etc */
+.clearfix {
+    @extend %clearfix;
+}
+
+.visually-hidden {
+    @extend %visuallyhidden;
+}
+
+/* prevent responsive on old IE - scrollbars should appear on old IE */
+.site-wide {
+    max-width: $site-width;
+    margin: 0 auto;
+
+    .lt-ie9 & { 
+        min-width: $site-width;
+    }
+}
+
+.layer-0 { z-index: $layer-0; }
+.layer-1 { z-index: $layer-1; }
+.layer-2 { z-index: $layer-2; }
+.layer-3 { z-index: $layer-3; }
+.layer-4 { z-index: $layer-4; }
+.layer-5 { z-index: $layer-5; }
+.layer-6 { z-index: $layer-6; }
+.layer-7 { z-index: $layer-7; }
+.layer-8 { z-index: $layer-8; }
+.layer-9 { z-index: $layer-9; }
+.layer-10 { z-index: $layer-10; }

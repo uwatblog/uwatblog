@@ -1,0 +1,13 @@
+/* the website home page styles */
+.home-main-outer {
+	padding-top: $standard-padding-top;
+	padding-bottom: $standard-padding-top;
+
+	.intro-left {
+		padding-right: 5%;
+
+        @include respond-max($mobile-max) {
+            padding-right: 0;
+        }
+	}
+}

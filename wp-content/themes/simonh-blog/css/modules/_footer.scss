@@ -1,0 +1,19 @@
+.footer-outer {
+	padding-top: $standard-padding-top;
+	padding-bottom: $standard-padding-top;
+	background-color: #fff;
+	text-align: center;
+	
+	.footer-inner {
+		
+		p, a {
+			//color: $nav-link-color;
+			font-weight: bold;
+			@include font-size(12px);
+		}
+
+		a {
+			color: $main-link-color;
+		}
+	}
+}

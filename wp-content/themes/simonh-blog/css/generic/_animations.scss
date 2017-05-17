@@ -1,0 +1,110 @@
+// .downSection{
+//     -webkit-animation:pulsate 6s ease-in-out;
+//     -moz-animation:pulsate 6s ease-in-out;-o-animation:pulsate 6s ease-in-out;
+//     animation:pulsate 5s ease-in-out;-webkit-animation-iteration-count:infinite;
+//     -moz-animation-iteration-count:infinite;-o-animation-iteration-count:infinite;
+//     animation-iteration-count:infinite
+// }
+@-webkit-keyframes pulsate {
+  /* line 539, ../sass/_styles.scss */
+  0% {
+    -webkit-transform: scale(1, 1); 
+    opacity: 1.0;   
+  }
+
+  /* line 544, ../sass/_styles.scss */
+  25% {
+    -webkit-transform: scale(0.8, 0.8);
+    opacity: 0.8;
+  }
+
+  /* line 549, ../sass/_styles.scss */
+  50% {
+    -webkit-transform: scale(1, 1);
+    opacity: 1.0;
+  }
+
+  /* line 554, ../sass/_styles.scss */
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 1.0;
+  }
+}
+
+@-moz-keyframes pulsate {
+    /* line 561, ../sass/_styles.scss */
+    0% {
+        -moz-transform: scale(1, 1);
+        opacity: 1.0;
+    }
+
+    /* line 566, ../sass/_styles.scss */
+    25% {
+        -moz-transform: scale(0.8, 0.8);
+        opacity: 0.8;
+    }
+
+    /* line 571, ../sass/_styles.scss */
+    50% {
+        -moz-transform: scale(1, 1);
+        opacity: 1.0;
+    }
+
+    /* line 576, ../sass/_styles.scss */
+    100% {
+        -moz-transform: scale(1, 1);
+        opacity: 1.0;
+    }
+}
+
+@-o-keyframes pulsate {
+  /* line 582, ../sass/_styles.scss */
+  0% {
+        -o-transform: scale(1, 1);
+        opacity: 1.0;
+  }
+
+  /* line 587, ../sass/_styles.scss */
+  25% {
+        -o-transform: scale(0.8, 0.8);
+        opacity: 0.8;
+  }
+
+  /* line 592, ../sass/_styles.scss */
+  50% {
+        -o-transform: scale(1, 1);
+        opacity: 1.0;
+  }
+
+  /* line 597, ../sass/_styles.scss */
+  100% {
+        -o-transform: scale(1, 1);
+        opacity: 1.0;
+  }
+}
+
+@keyframes pulsate {
+    /* line 603, ../sass/_styles.scss */
+    0% {
+        transform: scale(1, 1);
+        opacity: 1.0;
+    }
+
+    /* line 608, ../sass/_styles.scss */
+    25% {
+        transform: scale(0.8, 0.8);
+        opacity: 0.8;
+    }
+
+    /* line 613, ../sass/_styles.scss */
+    50% {
+        transform: scale(1, 1);
+        opacity: 1.0;
+    }
+
+    /* line 618, ../sass/_styles.scss */
+    100% {
+        transform: scale(1, 1);
+        opacity: 1.0;
+    }
+}
